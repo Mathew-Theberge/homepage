@@ -1,3 +1,5 @@
-body {
-    background-color: rgb(46, 119, 255);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
