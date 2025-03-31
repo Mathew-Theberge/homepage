@@ -26,6 +26,11 @@ img {
     display: block;
 }
 
+svg {
+    height: 40px;
+    width: 40px;
+}
+
 body {
     min-height: 100svh;
     display: flex;
@@ -45,10 +50,6 @@ body {
         sans-serif;
 }
 
-main {
-    flex: 1;
-}
-
 header::before {
     content: "";
     position: absolute;
@@ -61,7 +62,6 @@ header::before {
 }
 
 footer {
-    height: 300px;
     background-image: linear-gradient(45deg, #0891b2, #08b255);
 }
 
@@ -118,13 +118,13 @@ header > div > img {
 
 .socialLinks {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
     align-self: flex-end;
 }
 
 .socialLinks img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 
 /* main content styles */
@@ -148,7 +148,7 @@ h4 {
     row-gap: 2rem;
     column-gap: 3rem;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, minmax(300px, 450px));
     justify-content: center;
 }
 
@@ -158,6 +158,7 @@ h4 {
 }
 
 .projectCard > img {
+    object-fit: cover;
     width: 100%;
     height: auto;
     border-top-left-radius: 16px;
@@ -171,13 +172,13 @@ h4 {
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
     align-items: center;
-    height: 175px;
 }
 
 .projectCard-desc p:last-child {
     align-self: start;
     margin-top: 0.5rem;
     grid-column: 1/3;
+    margin-bottom: 3rem;
 }
 
 .projectCard-desc p:first-child {
@@ -192,6 +193,73 @@ h4 {
 .projectCard-links * {
     width: 30px;
     height: 30px;
+}
+
+/* footer styles */
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2rem 3rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: -16px;
+}
+
+.footerTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 500px;
+}
+
+.footerTextContainer > :first-child {
+    font-size: 3rem;
+    font-family: "Playfair";
+}
+
+footer .socialLinks {
+    align-self: flex-start;
+    margin-top: 16px;
+}
+
+footer .socialLinks * {
+    width: 50px;
+    height: 50px;
+}
+
+/* loading screen */
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading 0.75s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 /* media queries */
