@@ -85,7 +85,7 @@ header {
 .aboutMeCard {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.5rem;
     gap: 1.25rem;
     background-color: white;
     min-height: 375px;
@@ -272,7 +272,7 @@ footer .socialLinks * {
 
 /* media queries */
 
-@media screen and (max-width: 1200px) and (min-width: 751px) {
+@media screen and (max-width: 1200px) and (min-width: 801px) {
     .projects {
         grid-template-columns: repeat(2, minmax(300px, 450px));
     }
@@ -346,12 +346,19 @@ footer .socialLinks * {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .projects {
         grid-template-columns: minmax(300px, 500px);
     }
     h4 {
         grid-column: 1/2;
+        text-align: center;
+        margin-bottom: -12px;
+    }
+
+    h3 {
+        font-size: 3rem !important;
+        margin-top: 1rem;
     }
 
     header {
@@ -360,11 +367,7 @@ footer .socialLinks * {
 
     header p {
         text-align: center;
-    }
-
-    h4 {
-        text-align: center;
-        margin-bottom: -12px;
+        font-size: 1.5rem !important;
     }
 
     .aboutMeCard {
@@ -377,11 +380,12 @@ footer .socialLinks * {
     }
 
     header::before {
-        transform: skewY(-7deg) translateY(-60%);
+        transform: skewY(-7deg) translateY(-75%);
     }
 
     .imageContainer img {
-        height: 600px;
+        max-width: 70svw;
+        height: 500px;
         object-fit: cover;
     }
 
@@ -401,12 +405,23 @@ footer .socialLinks * {
         align-self: center;
     }
 
-    .imgContainer {
-        width: 100%;
+    .imageText {
+        text-wrap: wrap;
+        text-align: start;
     }
 
     .imgContainer img {
-        width: 100%;
+        width: 100svw;
         object-fit: cover;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .imageContainer img {
+        height: 400px;
+    }
+
+    header::before {
+        transform: skewY(-7deg) translateY(-80%);
     }
 }
