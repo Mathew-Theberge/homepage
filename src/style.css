@@ -22,6 +22,10 @@
     margin: 0;
 }
 
+a {
+    color: white;
+}
+
 img {
     display: block;
 }
@@ -236,10 +240,6 @@ footer {
     color: white;
     font-size: 1.5rem;
     max-width: 500px;
-}
-
-.phoneNumber {
-    color: white !important;
 }
 
 .footerTextContainer > :first-child {
