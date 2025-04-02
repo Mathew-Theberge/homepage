@@ -189,6 +189,7 @@ h4 {
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
     align-items: center;
+    height: 175px;
 }
 
 .projectCard-desc p:last-child {
@@ -443,4 +444,14 @@ footer .socialLinks * {
     .footerTextContainer {
         padding: 0;
     }
+}
+
+/* hover states and animation */
+
+.projectCard:hover {
+    transform: translateY(-6px);
+}
+
+.projectCard {
+    transition: transform 0.2s ease-out;
 }
