@@ -36,6 +36,7 @@ svg {
 }
 
 body {
+    overflow-x: hidden;
     min-height: 100svh;
     display: flex;
     flex-direction: column;
@@ -233,7 +234,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    color: white;
+    color: white !important;
     font-size: 1.5rem;
     max-width: 500px;
 }
